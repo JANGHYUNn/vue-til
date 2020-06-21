@@ -1,13 +1,13 @@
 <template>
   <header>
     <div>
-      <router-link to="/" class="logo">
+      <router-link to="/vue-til" class="logo">
         TIL
       </router-link>
     </div>
     <div class="navigations">
-      <router-link to="/login">로그인</router-link>
-      <router-link to="/signup">회원가입</router-link>
+      <router-link to="/vue-til/login">로그인</router-link>
+      <router-link to="/vue-til/signup">회원가입</router-link>
     </div>
   </header>
 </template>
