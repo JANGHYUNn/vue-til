@@ -1,18 +1,26 @@
 {
   "name": "vue-til",
   "version": "0.1.0",
+  "homepage": "/",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "cname": "echo vue-til.kro.kr > build\\CNAME",
+    "nojekyll": "echo > build\\.nojekyll",
+    "predeploy": "npm run build && npm run cname && npm run nojekyll",
+    "deploy": "gh-pages --add --dotfiles -d dist"
   },
   "dependencies": {
     "axios": "^0.19.2",
     "core-js": "^3.6.5",
+    "gh-pages": "^3.1.0",
+    "pm2": "^4.4.0",
     "vue": "^2.6.11",
-    "vue-router": "^3.3.4"
+    "vue-router": "^3.3.4",
+    "vuex": "^3.4.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
