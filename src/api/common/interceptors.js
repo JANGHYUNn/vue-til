@@ -8,7 +8,7 @@ export function setInterceptors(instance) {
       return config;
     },
     function(error) {
-      console.log(error);
+      return Promise.reject(error);
     },
   );
 
@@ -17,9 +17,8 @@ export function setInterceptors(instance) {
       return config;
     },
     function(error) {
-      console.log(error);
+      return Promise.reject(error);
     },
   );
-  console.log(instance);
   return instance;
 }

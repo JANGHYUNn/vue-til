@@ -22,16 +22,16 @@
 </template>
 
 <script>
-import { registerUser } from "@/api/index";
+import { registerUser } from '@/api/auth';
 export default {
   data() {
     return {
       // form values
-      username: "",
-      password: "",
-      nickname: "",
+      username: '',
+      password: '',
+      nickname: '',
       // log
-      logMessage: ""
+      logMessage: '',
     };
   },
   methods: {
@@ -39,7 +39,7 @@ export default {
       const userData = {
         username: this.username,
         password: this.password,
-        nickname: this.nickname
+        nickname: this.nickname,
       };
       const { data } = await registerUser(userData);
       console.log(data.username);
@@ -47,11 +47,11 @@ export default {
       this.initForm();
     },
     initForm() {
-      this.username = "";
-      this.password = "";
-      this.nickname = "";
-    }
-  }
+      this.username = '';
+      this.password = '';
+      this.nickname = '';
+    },
+  },
 };
 </script>
 
